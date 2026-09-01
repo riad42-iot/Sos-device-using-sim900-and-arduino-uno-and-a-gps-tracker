@@ -64,17 +64,19 @@ flowchart TD
     H --> I[LED Feedback: Blink]
     I --> C
 ```
-
-##✨ Unique Features
+---
+## ✨ Unique Features
 Feature	How It Works
-🆘 One-Button Emergency	Press a single button to trigger the entire alert sequence.
-📍 GPS Location Tracking	Uses NEO-6M GPS to get precise latitude and longitude.
-📱 Auto SMS Alert	Sends a Google Maps link with the exact location to 2+ emergency contacts.
-📞 Auto Voice Call	Makes a call to the primary emergency contact for immediate verbal communication.
-🔔 LED Feedback	Flashing LED indicates the device is working and alerts have been sent.
-🪫 Standalone Operation	Works without a smartphone — perfect for elderly or non-tech users.
-🔋 Battery Powered	Can be powered with a 9V battery for portable use.
-💾 SIM Card Ready	Works with any GSM network using a standard SIM card.
+-🆘 One-Button Emergency	Press a single button to trigger the entire alert sequence.
+-📍 GPS Location Tracking	Uses NEO-6M GPS to get precise latitude and longitude.
+-📱 Auto SMS Alert	Sends a Google Maps link with the exact location to 2+ emergency contacts.
+-📞 Auto Voice Call	Makes a call to the primary emergency contact for immediate verbal communication.
+-🔔 LED Feedback	Flashing LED indicates the device is working and alerts have been sent.
+-🪫 Standalone Operation	Works without a smartphone — perfect for elderly or non-tech users.
+-🔋 Battery Powered	Can be powered with a 9V battery for portable use.
+-💾 SIM Card Ready	Works with any GSM network using a standard SIM card.
+
+---
 🧩 Hardware Bill of Materials (BOM)
 Component	Quantity	Purpose
 Arduino Uno R3	1	Main microcontroller
