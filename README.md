@@ -1,19 +1,19 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=🏠+ESP32+Home+Automation;Wi-Fi+Controlled+Relay;Smart+Lighting+at+Your+Fingertips+💡" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=🚨+SOS+Emergency+Device;GPS+%2B+GSM+Tracker;One+Button+to+Save+Lives+🆘" alt="Typing SVG" />
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MCU-ESP32-000000?style=for-the-badge&logo=espressif&logoColor=white" />
-  <img src="https://img.shields.io/badge/Connectivity-Wi--Fi-1A73E8?style=for-the-badge&logo=wifi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Actuator-Relay%20Module-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Interface-Web%20Server-brightgreen?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCU-Arduino%20Uno-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
+  <img src="https://img.shields.io/badge/GSM-SIM900L-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/GPS-NEO--6M-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Communication-SMS%20%26%20Call-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <b>Control your home appliances from any device with a web browser.</b>
+  <b>An emergency alert system that sends your exact location via SMS and calls for help with one button.</b>
   <br />
-  <i>No cloud dependency — just pure local Wi-Fi control.</i>
+  <i>Built with Arduino Uno, SIM900L GSM, and NEO-6M GPS.</i>
 </p>
 
 ---
@@ -27,7 +27,7 @@
 - [🔌 Pin Mapping (Wiring Diagram)](#-pin-mapping-wiring-diagram)
 - [💻 Software Architecture](#-software-architecture)
 - [🚀 Getting Started](#-getting-started-setup--upload)
-- [🖥️ Web Interface Preview](#️-web-interface-preview)
+- [📱 How It Works](#-how-it-works)
 - [🏠 Real-World Applications](#-real-world-applications)
 - [🔮 Future Upgrades & Ideas](#-future-upgrades--ideas)
 - [🤝 Acknowledgments](#-acknowledgments)
@@ -36,32 +36,28 @@
 
 ## 💡 Concept & Inspiration
 
-Traditional wall switches are fixed, inconvenient, and require physical access. This project transforms a standard electrical appliance (like a bulb) into a **smart device** using an **ESP32** microcontroller and a relay module.
+In emergencies, every second counts. But in Bangladesh and many developing countries, emergency services often lack precise location information, leading to delayed responses.
 
-By hosting a lightweight **web server** directly on the ESP32, you can control the appliance from your smartphone, tablet, or laptop — as long as you're on the same Wi-Fi network.
+This project solves that problem by creating a **portable, standalone SOS device** that:
+- 🔴 Sends an **SMS with GPS coordinates** to pre-saved emergency contacts
+- 📞 Makes an **automatic voice call** to the emergency number
+- 🗺️ Provides **real-time location tracking** via Google Maps link
 
-> 🎯 **Real-World Use Case:** Turn on your room lights without getting out of bed, or control your workshop equipment remotely without touching a switch.
+> 🎯 **Real-World Use Case:** Elderly individuals, solo travelers, women in distress, or anyone in an emergency can press a single button to instantly alert their family and emergency services with their exact location.
 
 ---
 
 ## ⚙️ System Architecture
 
-The ESP32 acts as both a **Wi-Fi client** and a **web server**. Here's how it works:
-
 ```mermaid
 flowchart TD
-    A[Power ON ESP32] --> B[Load Wi-Fi Credentials from Code]
-    B --> C[Attempt Wi-Fi Connection]
-    C --> D{Connected to Router?}
-    D -->|No| E[Retry / Error]
-    D -->|Yes| F[Obtain Local IP Address]
-    F --> G[Print IP to Serial Monitor]
-    G --> H[Start Web Server]
-    H --> I[Wait for Client Request]
-    I --> J[User Opens Browser at ESP32 IP]
-    J --> K[ESP32 Serves HTML Page]
-    K --> L[User Clicks ON/OFF Button]
-    L --> M[Browser Sends HTTP Request]
-    M --> N[ESP32 Toggles Relay]
-    N --> O["Relay Switches Bulb (ON/OFF)"]
-    O --> I
+    A[Power ON Device] --> B[Initialize GPS & GSM]
+    B --> C[Wait for GPS Fix]
+    C --> D{Button Pressed?}
+    D -->|No| C
+    D -->|Yes| E[Get GPS Coordinates]
+    E --> F[Convert to Google Maps Link]
+    F --> G[Send SMS to Emergency Numbers]
+    G --> H[Make Emergency Call]
+    H --> I[LED Feedback: Blink]
+    I --> C
