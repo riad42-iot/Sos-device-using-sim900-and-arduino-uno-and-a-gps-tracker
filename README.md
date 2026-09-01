@@ -79,34 +79,41 @@ flowchart TD
 | 💾 **SIM Card Ready** | Works with any GSM network using a standard SIM card. |
 
 ---
-🧩 Hardware Bill of Materials (BOM)
-Component	Quantity	Purpose
-Arduino Uno R3	1	Main microcontroller
-SIM900L GSM Module	1	Sends SMS and makes calls
-NEO-6M GPS Module	1	Gets real-time location coordinates
-Push Button	1	Emergency trigger
-LED (Any Color)	1	Visual feedback indicator
-Resistor (220Ω)	1	Current limiting for LED
-SIM Card (Active)	1	For GSM connectivity
-9V Battery (with connector)	1	Portable power source
-Jumper Wires	Several	Connections
-Breadboard / PCB	1	Circuit assembly
-⚠️ Note: You need an active SIM card with SMS and call credit for this to work.
+## 🧩 Hardware Bill of Materials (BOM)
 
-🔌 Pin Mapping (Wiring Diagram)
-Component	Pin	Arduino Pin
-SIM900L	VCC	5V
-GND	GND
-TX	D9
-RX	D10
-NEO-6M GPS	VCC	5V
-GND	GND
-TX	D3
-RX	D4
-Push Button	One Leg	D7
-Other Leg	GND
-LED	Anode (+)	D8 (via 220Ω)
-Cathode (-)	GND
+| Component | Quantity | Purpose |
+| :--- | :--- | :--- |
+| **Arduino Uno R3** | 1 | Main microcontroller |
+| **SIM900L GSM Module** | 1 | Sends SMS and makes calls |
+| **NEO-6M GPS Module** | 1 | Gets real-time location coordinates |
+| **Push Button** | 1 | Emergency trigger |
+| **LED (Any Color)** | 1 | Visual feedback indicator |
+| **Resistor (220Ω)** | 1 | Current limiting for LED |
+| **SIM Card (Active)** | 1 | For GSM connectivity |
+| **9V Battery (with connector)** | 1 | Portable power source |
+| **Jumper Wires** | Several | Connections |
+| **Breadboard / PCB** | 1 | Circuit assembly |
+
+> ⚠️ **Note:** You need an **active SIM card** with SMS and call credit for this to work.
+ 
+---
+## 🔌 Pin Mapping (Wiring Diagram)
+
+| Component | Pin | Arduino Pin |
+| :--- | :--- | :--- |
+| **SIM900L** | VCC | 5V |
+| | GND | GND |
+| | TX | **D9** |
+| | RX | **D10** |
+| **NEO-6M GPS** | VCC | 5V |
+| | GND | GND |
+| | TX | **D3** |
+| | RX | **D4** |
+| **Push Button** | One Leg | **D7** |
+| | Other Leg | GND |
+| **LED** | Anode (+) | **D8** (via 220Ω) |
+| | Cathode (-) | GND |
+---
 💻 Software Architecture
 The device follows a simple but effective logic flow:
 
