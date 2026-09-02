@@ -257,4 +257,3 @@ Take this project to the next level:
 
 
 
-<p align="center"> <img src="https://raw.githubusercontent.com/trinib/trinib/snake/github-contribution-grid-snake-dark.svg" width="100%" /> </p><p align="center"> <b>Made with ❤️, C++, and the will to save lives by Md. Al-Riad</b> <br /> <i>One button — instant help, anywhere.</i> <br /><br /> <img src="https://img.shields.io/badge/Emergency-SOS-red?style=flat-square" /> <img src="https://img.shields.io/badge/Made%20with-Arduino-00979D?style=flat-square" /> <img src="https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=flat-square" /> </p> ```
