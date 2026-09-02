@@ -235,7 +235,7 @@ Take this project to the next level:
 
 ## 🤝 Acknowledgments
 
-- Built with ❤️ by **Md. Al-Riad** at **UFTB**.
+- Built by **Md. Al-Riad**.
 - Powered by **Arduino**, **SIM900L**, and **NEO-6M GPS**.
 - Inspired by the need for affordable, accessible emergency solutions in Bangladesh.
 
