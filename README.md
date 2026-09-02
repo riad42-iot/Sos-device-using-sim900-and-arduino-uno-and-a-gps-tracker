@@ -134,11 +134,11 @@ When the button is pressed:
 1. **Get GPS Location** – Reads latitude and longitude
 2. **Format Message** – Creates a Google Maps link:
 
-bash ```
+``` bash
 
 EMERGENCY! I need help at: 
 https://maps.google.com/maps?q=23.8103,90.4125
-``
+```
 
 ---
 ## 🚀 Getting Started (Setup & Upload)
@@ -158,9 +158,9 @@ TinyGPS++.h – for GPS data parsing
 3. Configure Emergency Contacts
 Open the .ino file and replace:
 
-cpp ```
+``` cpp
 String emergencyNumbers[] = {"+8801XXXXXXXXX", "+8801XXXXXXXXX"}; // Your contacts
-``
+```
 4. Upload the Code
 Select board: Tools → Board → Arduino Uno
 
@@ -195,10 +195,10 @@ Check your phone for the SMS and missed call
 
 When the recipient clicks the link, it opens Google Maps showing the exact location of the sender!
 
-cpp ```
+``` cpp
 EMERGENCY! I need help at:
 https://maps.google.com/maps?q=23.8103,90.4125
-``
+```
 ---
 
 ## 🏠 Real-World Applications
@@ -246,7 +246,7 @@ Take this project to the next level:
 </p>
 
 <p align="center">
-  <b>Made with ❤️, C++, and the will to save lives by Md. Al-Riad</b>
+  <b>Made by Md. Al-Riad</b>
   <br />
   <i>One button — instant help, anywhere.</i>
   <br /><br />
@@ -255,33 +255,6 @@ Take this project to the next level:
   <img src="https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=flat-square" />
 </p>
 
-🏠 Real-World Applications
-Scenario	Why This Matters
-Elderly Care	Seniors can call for help if they fall or feel unwell.
-Women's Safety	Women in distress can alert family and authorities discreetly.
-Travel Safety	Solo travelers can send their location if they get lost or face danger.
-Child Safety	Children can use it to alert parents in emergencies.
-Outdoor Activities	Hikers, fishermen, and remote workers can call for rescue.
-Medical Emergencies	Patients with chronic conditions can call for immediate help.
-🔮 Future Upgrades & Ideas
-Take this project to the next level:
 
-Upgrade	Description
-📡 IoT Integration	Send alerts to a cloud dashboard (AWS/Azure) using MQTT.
-📱 Mobile App	Build a Flutter app to receive and display SOS alerts on a map.
-🗺️ Real-Time Tracking	Continuously track the device's location on a live map.
-🔊 Siren/Alarm	Add a loud buzzer to deter attackers.
-🔋 Battery Optimization	Use deep sleep modes for months of battery life.
-📶 Signal Strength	Add an LED to show GSM signal strength.
-🔐 Authentication	Add a PIN code to prevent false alarms.
-📸 Camera Integration	Capture and send a photo along with the location.
-🌐 4G Upgrade	Upgrade to 4G/LTE for faster communication.
-💬 Two-Way Communication	Allow the contact to reply and confirm help is on the way.
-🤝 Acknowledgments
-Built with ❤️ by Md. Al-Riad at UFTB.
-
-Powered by Arduino, SIM900L, and NEO-6M GPS.
-
-Inspired by the need for affordable, accessible emergency solutions in Bangladesh.
 
 <p align="center"> <img src="https://raw.githubusercontent.com/trinib/trinib/snake/github-contribution-grid-snake-dark.svg" width="100%" /> </p><p align="center"> <b>Made with ❤️, C++, and the will to save lives by Md. Al-Riad</b> <br /> <i>One button — instant help, anywhere.</i> <br /><br /> <img src="https://img.shields.io/badge/Emergency-SOS-red?style=flat-square" /> <img src="https://img.shields.io/badge/Made%20with-Arduino-00979D?style=flat-square" /> <img src="https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=flat-square" /> </p> ```
